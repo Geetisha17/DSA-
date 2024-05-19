@@ -26,7 +26,7 @@ using namespace std;
 //         return -1;
 //     }
 
-int celebrity(vector<vector<int> >& a, int n) 
+int celebrity(vector<vector<int> >& M, int n) 
     {
         int c = 0; 
         
