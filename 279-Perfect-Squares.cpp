@@ -5,13 +5,14 @@ class Solution {
 
         if(dp[n]!=-1) return dp[n];
 
-        int mini=1e9;
-        for(int i=0; i<n; i++)
+        int mini=INT_MAX;
+        for(int j=1;j*j<=n;j++)
         {
-            int res = 1 + helper(n-i*i,dp);
-            mini = min(mini,res);
+            int a = 1 + helper(n-(j*j),dp);
+            mini = min(mini,a);
         }
-        return dp[n]=mini;
+
+        return dp[n] = mini;
     }
 public:
     int numSquares(int n) {
